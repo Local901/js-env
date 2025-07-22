@@ -18,12 +18,8 @@ export class EnvError extends Error {
 }
 
 export class Env {
-    private static getEnv(env: string): string | undefined {
-        return process.env[env];
-    }
-
     private static processEnv<T>(env: string, Default: T | undefined, processor: (value: string) => T): T {
-        const value = this.getEnv(env);
+        const value = process.env[env];
         if (!value) {
             return Default !== undefined ? Default : EnvError.notFound(env);
         }
