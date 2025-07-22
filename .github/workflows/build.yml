@@ -1,0 +1,19 @@
+name: Build package
+run-name: Build package
+on:
+  push:
+    tags:
+      - v*
+jobs:
+  Deploy-Package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+      - run: "npm run build"
+      - run: "cp package.json dist/package.json"
+      - run: "cp README.md dist/README.md"
+      - run: "echo \"//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_KEY }}\" > ~/.npmrc"
+      - run: "cd dist && npm publish --access public"

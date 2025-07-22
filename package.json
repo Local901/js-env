@@ -1,0 +1,30 @@
+{
+  "name": "@local901/env",
+  "version": "0.0.0",
+  "description": "env utility",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Local901/js-env.git"
+  },
+  "keywords": [
+    "env"
+  ],
+  "author": "Local901",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Local901/js-env/issues"
+  },
+  "homepage": "https://github.com/Local901/js-env#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.12",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  }
+}
