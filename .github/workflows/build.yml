@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "22"
+      - run: "npm i"
       - run: "npm run build"
       - run: "cp package.json dist/package.json"
       - run: "cp README.md dist/README.md"
