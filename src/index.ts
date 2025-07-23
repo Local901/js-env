@@ -71,12 +71,6 @@ export class Env {
         });
     }
 
-    public static path(env: string, Default?: ParsedPath | string): ParsedPath {
-        return this.processEnv(env, typeof Default === "string" ? path.parse(Default) : Default, (value) => {
-            return path.parse(value);
-        });
-    }
-
     public static json(env: string, Default?: unknown): unknown {
         return this.processEnv(env, Default, (value) => {
             try {
