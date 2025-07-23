@@ -1,6 +1,6 @@
 {
   "name": "@local901/env",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "env utility",
   "main": "index.js",
   "scripts": {
