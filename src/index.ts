@@ -1,5 +1,4 @@
 import { config } from "dotenv"
-import path, { type ParsedPath } from "path"
 
 config();
 
